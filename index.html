@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Finance Dashboard with Animations</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background Animation Canvases -->
+  <canvas id="bg-canvas"></canvas>
+  <div id="diamond-bg"></div>
+  <canvas id="mouse-canvas"></canvas>
+  <canvas id="sparkle-canvas"></canvas>
+
+  <!-- Main Dashboard -->
+  <div class="dashboard-content section-animate">
+    <h1>Personal Finance Dashboard</h1>
+    <button id="show-summary-btn">Show Total</button>
+    <section class="summary-section" id="summary"></section>
+
+    <form id="expense-form" class="entry-form">
+      <h2>Add Expense</h2>
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="number" id="amount" min="0.01" step="0.01" placeholder="Amount" required />
+      <select id="currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="INR">INR</option>
+      </select>
+      <select id="category">
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <form id="savings-form" class="entry-form">
+      <h2>Add Savings</h2>
+      <input type="text" id="savings-description" placeholder="Description" required />
+      <input type="number" id="savings-amount" min="0.01" step="0.01" placeholder="Amount" required />
+      <select id="savings-currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="INR">INR</option>
+      </select>
+      <select id="savings-category">
+        <option value="Salary">Salary</option>
+        <option value="Gift">Gift</option>
+        <option value="Investment">Investment</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit">Add Savings</button>
+    </form>
+
+    <div class="convert-section">
+      <label for="base-currency">Display all in: </label>
+      <select id="base-currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="INR">INR</option>
+      </select>
+    </div>
+
+    <div>
+      <h2>Expenses</h2>
+      <div id="expenses"></div>
+    </div>
+
+    <div>
+      <h2>Savings</h2>
+      <div id="savings"></div>
+    </div>
+  </div>
+
+  <!-- Total overlay -->
+  <div id="total-overlay" class="overlay">
+    <div class="overlay-content" id="overlay-content">
+      <button id="close-overlay" aria-label="Close total overlay">&times;</button>
+      <div id="total-details"></div>
+    </div>
+  </div>
+
+  <div class="about-card section-animate">
+    <h2>About</h2>
+    <p>
+      This finance dashboard helps you track <b>expenses</b> and <b>savings</b>
+      in a modern neon theme.<br />
+      The animated backgrounds and effects provide a glowing, interactive vibe.
+    </p>
+    <h3>Key Features</h3>
+    <ul>
+      <li class="feature-glow">Add/Delete Expenses &amp; Savings</li>
+      <li class="feature-glow">Currency Conversion (USD/EUR/INR)</li>
+      <li class="feature-glow">Animated neon backgrounds &amp; sparkles</li>
+      <li class="feature-glow">"Show Total" with instant summary overlay</li>
+      <li class="feature-glow">All data is private in your browser</li>
+      <li class="feature-glow">Responsive layout for all devices</li>
+    </ul>
+    <div class="info-tip">
+      Tip: Scroll down and interact with inputs/buttons to see animations.
+    </div>
+  </div>
+
+  <footer class="site-footer section-animate">
+    <div>Developed by:</div>
+    <div class="team-list">
+      <span>M.Rakesh Kumar</span>
+      <span>E.Hitesh</span>
+      <span>P.Umesh</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
