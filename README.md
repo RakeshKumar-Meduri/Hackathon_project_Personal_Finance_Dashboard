@@ -15,3 +15,7 @@ All user data stored locally in the browser for privacy and offline availability
 
 Tech stack:
 Front End : HTML, CSS, JavaScript
+
+![pic-1](https://github.com/user-attachments/assets/6b66aff5-876b-4281-9865-3cd2ec9442ce)
+![pic-2](https://github.com/user-attachments/assets/c6465fbf-d65a-44fb-9136-7eaf6d29448c)
+
